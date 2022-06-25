@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dnd Ambiance</title>
+    <link rel="stylesheet" href="./styles.css"/> 
+</head>    
+<body>
+    <header>
+        <hgroup class="ambianceHeaders">
+            <h1 class="page-header">Ambiance</h1>
+            <h2 class="page-subheader">Add some atmosphere to your game</h2>
+        </hgroup>
+    </header>
+    <main>
+        <div id="ambianceLocationContainer" class="ambiance-location-container">
+            <h1 class="location-header">Loctation</h1>
+            <select name="location" id="locationSelect" class="location-select">
+                <option value="empty">Choose a location</option>
+                <option value="town">Town</option>                
+            </select>
+        </div>
+        <div id="ambianceFormContainer">
+            <!--
+            <form id="townAmbianceForm" class="town-ambiance-form">
+                <h2>Time Of Day</h2>
+                <input type="radio" name="time_of_day" id="day" value="Day" checked>
+                <label for="day">Day</label>
+                <input type="radio" name="time_of_day" id="night" value="Night">
+                <label for="night">Night</label>
+                <h2>Business</h2> 
+                <input type="radio" name="business" id="noneBusiness" value="None" checked>
+                <label for="noneBusiness">None</label>
+                <input type="radio" name="business" id="lowBusiness" value="Low">
+                <label for="lowBusiness">Low</label>
+                <input type="radio" name="business" id="mediumBusiness" value="Medium">
+                <label for="mediumBusiness">Medium</label>
+                <input type="radio" name="business" id="highBusiness" value="High">
+                <label for="highBusiness">High</label>
+                <h2>Music</h2>
+                <input type="radio" name="music" id="noneMusic" value="None" checked>
+                <label for="noneMusic">None</label>
+                <input type="radio" name="music" id="fightMusic" value="Fight">
+                <label for="fightMusic">Fight</label>
+                <input type="radio" name="music" id="eerieMusic" value="Eerie">
+                <label for="eerieMusic">Eerie</label>
+                <input type="radio" name="music" id="victoriousMusic" value="Victorious">
+                <label for="victoriousMusic">Victorious</label>
+                <h2>Rain</h2>
+                <input type="radio" name="rain" id="noneRain" value="None" checked>
+                <label for="noneRain">None</label>
+                <input type="radio" name="rain" id="lightRain" value="Light">
+                <label for="lightRain">Light</label>
+                <input type="radio" name="rain" id="mediumRain" value="Medium">
+                <label for="mediumRain">Medium</label>
+                <input type="radio" name="rain" id="heavyRain" value="Heavy">
+                <label for="heavyRain">Heavy</label>
+                <input type="radio" name="rain" id="thunderRain" value="Thunder">
+                <label for="thunderRain">Thunder</label>
+            </form>
+            -->
+        </div>
+        <div class="ambiance-play-button-container">
+            <button id="ambiancePlayButton" class="ambiance-play-button">Play</button>
+        </div>
+        <div id="audioContainer">
+
+        </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+    <script src="./playback.js"></script>
+    <script src="./ambiance-form.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
