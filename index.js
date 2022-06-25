@@ -7,3 +7,4 @@ const audioForm = new AudioForm(locationSelect,ambianceForm, {
     }
 })
 
+const audioPlayer = new AudioPlayer(locationSelect);
