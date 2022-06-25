@@ -9,6 +9,7 @@ class AudioForm{
     constructor(locationSelect,ambianceForm, callback){
         this.locationSelect = locationSelect;
         this.ambianceForm = ambianceForm;
+        this.audioContainer = document.querySelector('#audioContainer');
 
         if(callback){
             this.locationChange = callback.locationChange;
@@ -18,7 +19,11 @@ class AudioForm{
     }
 
     createForm = () => {
-        const audioPlayer = new AudioPlayer(this.locationSelect);
+        //Checks to see if there is already an audio file loaded and removes it
+        if(document.querySelector('#audioPlayback')){
+            this.audioContainer.removeChild(this.audioContainer.lastChild)
+        }
+
         if(this.locationSelect.value == 'town'){
             const townAmbianceForm = document.createElement('form');
             townAmbianceForm.setAttribute('id','townAmbianceForm');
@@ -62,7 +67,7 @@ class AudioForm{
                 'type' :'radio',
                 'name' :'business',
                 'id'   :'noneBusiness',
-                'value':'None'
+                'value': null
             });
             noBus.setAttribute('checked','true');
             townAmbianceForm.appendChild(noBus);
@@ -115,7 +120,7 @@ class AudioForm{
                 'type' :'radio',
                 'name' :'music',
                 'id'   :'noneMusic',
-                'value':'None',
+                'value': null
             });
             noMusic.setAttribute('checked','true');
             townAmbianceForm.appendChild(noMusic);
@@ -168,7 +173,7 @@ class AudioForm{
                 'type' :'radio',
                 'name' :'rain',
                 'id'   :'noneRain',
-                'value':'None',
+                'value': null
             });
             noneRain.setAttribute('checked','true');
             townAmbianceForm.appendChild(noneRain);
