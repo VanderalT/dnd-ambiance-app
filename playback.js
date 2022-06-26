@@ -8,21 +8,22 @@ class AudioPlayer {
 
         this.playButton.addEventListener('click', this.playbackAudio);
         this.pauseButton.addEventListener('click',this.pauseAudio);
+        this.setAudioObject = {};
     }
 
     playbackAudio = () => {
-        //Checks to see if there is already audio loaded and plays if so
+
+        //Checks to see if there is already an audio file loaded and removes it
         if(document.querySelector('#audioPlayback')){
-            document.querySelectorAll('audio').forEach(el => el.play());
-            return;
+            this.audioContainer.removeChild(this.audioContainer.lastChild)
         }
-        
+
         //Exits function if location is not chosen
         if(this.locationSelect.value == 'empty'){
             return;
         }
         
-        //Creates a new div for all of the audio elements
+        //Creates a new div for all of the audio elements to be put into
         const audioPlayback = document.createElement('div');
         audioPlayback.setAttribute('id','audioPlayback');
         this.audioContainer.appendChild(audioPlayback);
@@ -66,6 +67,7 @@ class AudioPlayer {
             if(!audioArrayEntry.includes('null')){
                 const audioEntry = document.createElement('audio');
                 audioEntry.setAttribute('src',`./sound-files/${audioArrayEntry[0]}${audioArrayEntry[1]}.mp3`);
+                audioEntry.setAttribute('loop','true');
                 audioPlayback.appendChild(audioEntry);
             }
         }

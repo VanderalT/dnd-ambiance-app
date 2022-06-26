@@ -24,6 +24,7 @@ class AudioForm{
             this.audioContainer.removeChild(this.audioContainer.lastChild)
         }
 
+        //Creates and changes form when location updated
         if(this.locationSelect.value == 'town'){
             const townAmbianceForm = document.createElement('form');
             townAmbianceForm.setAttribute('id','townAmbianceForm');
