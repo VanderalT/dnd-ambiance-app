@@ -1,13 +1,28 @@
+@font-face {
+    font-family: 'Blackcastlemf-BG5n';
+    src: url(./black-castle-mf-font/Blackcastlemf-BG5n.ttf);
+}
+
+@font-face {
+    font-family: 'Forum';
+    src: url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body{
+    background-color: #f9cf93;
+}
+
 header {
     display: flex;
     justify-content: center;
     margin-top: 5vh;
+    margin-bottom: 2vh;
 }
 
 main {
@@ -33,15 +48,18 @@ footer{
 }
 
 .page-header {
+    font-family: 'Blackcastlemf-BG5n';
+    font-weight: 100;
     font-size: 5rem;
 }
 
 .page-subheader {
+    font-family:'Forum';
+    font-weight: 100;
     font-size: 1.5rem;
 }
 
 .ambiance-location-container {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,11 +67,14 @@ footer{
 }
 
 .location-header {
+    font-family: 'Forum';
+    font-weight: 100;
     text-align: center;
     font-size: 3rem;
 }
 
 .location-select {
+    font-family: 'Forum';
     align-self: center;
     text-align: center;
     width: fit-content;
