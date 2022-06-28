@@ -77,9 +77,11 @@ footer{
 }
 
 .ambiance-play-button {
+    border-style: none;
     margin: 20px;
     width: 4rem;
     height: 4rem;
+    border-radius: 50px;
 }
 
 .ambiance-play-button:hover {
