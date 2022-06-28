@@ -235,52 +235,52 @@ class AudioForm{
             windTown.innerText = 'Wind';
             townAmbianceForm.appendChild(windTown);
             const noneWind = document.createElement('input');
-            setAttributes(noneWind,{
-                'type' :'radio',
-                'name' :'rain',
-                'id'   :'noneWind',
+            setAttributes(noneWind, {
+                'type': 'radio',
+                'name': 'wind',
+                'id': 'noneWind',
                 'value': null
             });
-            noneWind.setAttribute('checked','true');
+            noneWind.setAttribute('checked', 'true');
             townAmbianceForm.appendChild(noneWind);
             const noneWindLabel = document.createElement('label');
-            noneWindLabel.setAttribute('for','noneWind');
+            noneWindLabel.setAttribute('for', 'noneWind');
             noneWindLabel.innerText = 'None';
             townAmbianceForm.appendChild(noneWindLabel);
             const lightWind = document.createElement('input');
-            setAttributes(lightWind,{
-                'type' :'radio',
-                'name' :'rain',
-                'id'   :'lightWind',
-                'value':'Light'
+            setAttributes(lightWind, {
+                'type': 'radio',
+                'name': 'wind',
+                'id': 'lightWind',
+                'value': 'Light'
             });
             townAmbianceForm.appendChild(lightWind);
             const lightWindLabel = document.createElement('label');
-            lightWindLabel.setAttribute('for','lightWind');
+            lightWindLabel.setAttribute('for', 'lightWind');
             lightWindLabel.innerText = 'Light';
             townAmbianceForm.appendChild(lightWindLabel);
             const mediumWind = document.createElement('input');
-            setAttributes(mediumWind,{
-                'type' :'radio',
-                'name' :'rain',
-                'id'   :'mediumWind',
-                'value':'Medium'
+            setAttributes(mediumWind, {
+                'type': 'radio',
+                'name': 'wind',
+                'id': 'mediumWind',
+                'value': 'Medium'
             });
             townAmbianceForm.appendChild(mediumWind);
             const mediumWindLabel = document.createElement('label');
-            mediumWindLabel.setAttribute('for','mediumWind');
+            mediumWindLabel.setAttribute('for', 'mediumWind');
             mediumWindLabel.innerText = 'Medium';
             townAmbianceForm.appendChild(mediumWindLabel);
             const highWind = document.createElement('input');
-            setAttributes(highWind,{
-                'type' :'radio',
-                'name' :'rain',
-                'id'   :'highWind',
-                'value':'High'
+            setAttributes(highWind, {
+                'type': 'radio',
+                'name': 'wind',
+                'id': 'highWind',
+                'value': 'High'
             });
             townAmbianceForm.appendChild(highWind);
             const highWindLabel = document.createElement('label');
-            highWindLabel.setAttribute('for','highWind');
+            highWindLabel.setAttribute('for', 'highWind');
             highWindLabel.innerText = 'Heavy';
             townAmbianceForm.appendChild(highWindLabel);
 

@@ -34,6 +34,7 @@ class AudioPlayer {
             this.businessInputs = document.getElementsByName('business');
             this.musicInputs = document.getElementsByName('music');
             this.rainInputs = document.getElementsByName('rain');
+            this.windInputs = document.getElementsByName('wind');
 
             for(const input of this.timeOfDayInputs){
                 if(input.checked){
@@ -56,6 +57,12 @@ class AudioPlayer {
             for(const input of this.rainInputs){
                 if(input.checked){
                     audioArray.townRain = input.value
+                }
+            };
+
+            for(const input of this.windInputs){
+                if(input.checked){
+                    audioArray.townWind = input.value
                 }
             };
         }
