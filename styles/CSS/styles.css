@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "Blackcastlemf-BG5n";
+  src: url(../../black-castle-mf-font/Blackcastlemf-BG5n.ttf);
+}
+@font-face {
+  font-family: "Forum";
+  src: url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+}
+:root {
+  --animation-time:2s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
+
+main {
+  margin: 0 25vw;
+  width: 50vw;
+  min-width: 400px;
+  padding: 0 20px;
+  border: 2px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 0.1px;
+  border-color: rgba(54, 21, 0, 0.4941176471);
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 10vh;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 97%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 97%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.ambiance-candle-anim::before {
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background: rgb(249, 207, 147);
+  -webkit-animation: flicker var(--animation-time) ease alternate infinite;
+          animation: flicker var(--animation-time) ease alternate infinite;
+  background: radial-gradient(circle, rgba(241, 173, 78, 0.438) 0%, rgb(0, 0, 0) 100%);
+}
+
+.ambianceHeaders {
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.ambianceHeaders h1 {
+  font-family: "Blackcastlemf-BG5n";
+  font-weight: 100;
+  text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
+  font-size: 5rem;
+}
+.ambianceHeaders h2 {
+  font-family: "Forum";
+  font-weight: 100;
+  text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
+  font-size: 1.5rem;
+}
+
+.ambiance-location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+.ambiance-location-container h1 {
+  font-family: "Forum";
+  font-weight: 100;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
+}
+.ambiance-location-container select {
+  font-family: "Forum";
+  font-weight: 100;
+  align-self: center;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2rem;
+  background-color: rgba(250, 238, 224, 0.4745098039);
+  border: none;
+  border-radius: 10px;
+}
+.ambiance-location-container select:focus {
+  border: none;
+}
+.ambiance-location-container select:hover {
+  cursor: pointer;
+}
+
+.ambiance-form-container {
+  display: flex;
+  justify-content: center;
+}
+.ambiance-form-container form {
+  padding: 0 0 20px 20px;
+}
+.ambiance-form-container form h2 {
+  font-family: "Forum";
+  font-weight: 100;
+  font-style: italic;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.ambiance-form-container form input[type=radio] {
+  transition: 0.3s ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: none;
+  font: inherit;
+  color: currentColor;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+.ambiance-form-container form input[type=radio]:hover {
+  cursor: pointer;
+}
+.ambiance-form-container form input[type=radio]:checked {
+  background-color: rgba(0, 0, 0, 0.281);
+}
+.ambiance-form-container form label {
+  font-family: "Forum";
+  font-weight: 100;
+  margin-left: 5px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.ambiance-button-container {
+  display: flex;
+  justify-content: center;
+}
+.ambiance-button-container button {
+  border-style: none;
+  color: #1C0A00;
+  background-color: #603601;
+  margin: 20px;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+.ambiance-button-container button:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+}
+.link-container img {
+  transition: 0.3s ease-in-out;
+  width: 2vw;
+  height: auto;
+  opacity: 50%;
+}
+.link-container img:hover {
+  cursor: pointer;
+  opacity: 100%;
+}/*# sourceMappingURL=styles.css.map */

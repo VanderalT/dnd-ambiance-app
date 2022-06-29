@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8">
     <title>Dnd Ambiance</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles/CSS/styles.css">
     <link rel="stylesheet" href="./basalt-font/BasaltRegular-Jx3o.ttf">
     <!--Google Icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>    
 <body>
+    <div class="ambiance-candle-anim">
+    </div>
     <header>
         <hgroup class="ambianceHeaders">
             <h1 class="page-header">Ambiance</h1>
@@ -23,14 +25,14 @@
                 <option value="town">Town</option>                
             </select>
         </div>
-        <div id="ambianceFormContainer">
+        <div id="ambianceFormContainer" class="ambiance-form-container">
             <!--Where the form populates-->
         </div>
-        <div class="ambiance-play-button-container">
-            <button id="ambiancePlayButton" class="ambiance-play-button">
+        <div class="ambiance-button-container">
+            <button id="ambiancePlayButton" class="ambiance-button">
                 <span class="material-icons">play_arrow</span>
             </button>
-            <button id="ambiancePauseButton" class="ambiance-play-button">
+            <button id="ambiancePauseButton" class="ambiance-button">
                 <span class="material-icons">stop</span>
             </button>
         </div>
@@ -39,7 +41,11 @@
         </div>
     </main>
     <footer class="footer">
-
+        <div class="link-container">
+            <div>
+                <a href="https://github.com/VanderalT" target="_blank"><img src="./styles/images/GitHub-Mark-Light-120px-plus.png" alt="github-Link"></a>
+            </div>
+        </div>
     </footer>
     <script src="./playback.js"></script>
     <script src="./ambiance-form.js"></script>

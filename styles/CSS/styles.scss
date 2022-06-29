@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Blackcastlemf-BG5n';
+    src: url(../../black-castle-mf-font/Blackcastlemf-BG5n.ttf);
+}
+
+@font-face {
+    font-family: 'Forum';
+    src: url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+}
+
+:root{
+    --animation-time:2s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/background.jpg);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+main {
+    margin: 0 25vw;
+    width: 50vw;
+    min-width: 400px;
+    padding: 0 20px;
+    border: 2px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: #3615007e;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 10vh;
+}
+
+@mixin page-header {
+    font-family: 'Blackcastlemf-BG5n';
+    font-weight: 100;
+}
+
+@mixin forum-default {
+    font-family: 'Forum';
+    font-weight: 100;
+}
+
+@mixin text-shadows {
+    text-shadow: 2px 2px #ebebeb62;
+}
+
+@mixin transition-default {
+    transition: 0.3s ease-in-out;
+}
+
+@keyframes flicker{
+    0% {
+        opacity: 97%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.ambiance-candle-anim::before{
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: rgb(249,207,147);
+    animation: flicker var(--animation-time) ease alternate infinite;
+    background: radial-gradient(circle, rgba(241, 173, 78, 0.438) 0%, rgba(0,0,0,1) 100%);
+}
+
+.ambianceHeaders {
+    text-align: center;
+    width: fit-content;
+    h1 {
+        @include page-header;
+        @include text-shadows;
+        font-size: 5rem;
+    }
+
+    h2 {
+        @include forum-default;
+        @include text-shadows;
+        font-size: 1.5rem;
+    }
+}
+
+.ambiance-location-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+
+    h1 {
+        @include forum-default;
+        text-align: center;
+        font-size: 3rem;
+        text-shadow: 2px 2px #ebebeb62;
+    }
+
+    select {
+        @include forum-default;
+        align-self: center;
+        text-align: center;
+        width: fit-content;
+        font-size: 2rem;
+        background-color: #faeee079;
+        border: none;
+        border-radius: 10px;
+
+        &:focus{
+            border: none;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.ambiance-form-container{
+    display: flex;
+    justify-content: center;
+
+    form {
+        padding: 0 0 20px 20px;
+
+        h2{
+            @include forum-default;
+            font-style: italic;
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+    
+        input[type="radio"]{
+            @include transition-default;
+            appearance: none;
+            background-color: none;
+            font: inherit;
+            color: currentColor;
+            width: 1.5em;
+            height: 1.5em;
+            border: 0.15em solid currentColor;
+            border-radius: 50%;
+            margin-top: -1px;
+            vertical-align: middle;
+            
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            &:checked{
+                background-color: rgba(0, 0, 0, 0.281);
+            }
+        }
+
+        label {
+            @include forum-default;
+            margin-left: 5px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.ambiance-button-container{
+    display: flex;
+    justify-content: center;
+
+    button{
+        border-style: none;
+        color: #1C0A00;
+        background-color: #603601;
+        margin: 20px;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50px;
+        @include transition-default;
+
+        &:hover{
+            cursor: pointer;
+            opacity: 75%;
+        }
+    }
+}
+
+.link-container{
+    display: flex;
+    justify-content: center;
+
+    img{
+        @include transition-default;
+        width: 2vw;
+        height: auto;
+        opacity: 50%;
+
+        &:hover{
+            cursor: pointer;
+            opacity: 100%;
+        }
+    }
+}
+
+
+
