@@ -10,44 +10,47 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>    
 <body>
-    <div class="ambiance-candle-anim">
-    </div>
-    <header>
-        <hgroup class="ambianceHeaders">
-            <h1 class="page-header">Ambiance</h1>
-            <h2 class="page-subheader">Add some atmosphere to your game</h2>
-        </hgroup>
-    </header>
-    <main>
-        <div id="ambianceLocationContainer" class="ambiance-location-container">
-            <h1 class="location-header">Loctation</h1>
-            <select name="location" id="locationSelect" class="location-select">
-                <option value="empty">Choose a location</option>
-                <option value="town">Town</option>                
-            </select>
+    <div id="page-container">
+        <div class="ambiance-candle-anim">
         </div>
-        <div id="ambianceFormContainer" class="ambiance-form-container">
-            <!--Where the form populates-->
-        </div>
-        <div class="ambiance-button-container">
-            <button id="ambiancePlayButton" class="ambiance-button">
-                <span class="material-icons">play_arrow</span>
-            </button>
-            <button id="ambiancePauseButton" class="ambiance-button">
-                <span class="material-icons">stop</span>
-            </button>
-        </div>
-        <div id="audioContainer">
-
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="link-container">
-            <div>
-                <a href="https://github.com/VanderalT/dnd-ambiance-app" target="_blank"><img src="./styles/images/GitHub-Mark-Light-120px-plus.png" alt="github-Link"></a>
+        <header>
+            <hgroup class="ambianceHeaders">
+                <h1 class="page-header">Ambiance</h1>
+                <h2 class="page-subheader">Add some atmosphere to your game</h2>
+            </hgroup>
+        </header>
+        <main>
+            <div id="ambianceLocationContainer" class="ambiance-location-container">
+                <h1 class="location-header">Loctation</h1>
+                <select name="location" id="locationSelect" class="location-select">
+                    <option value="empty">Choose a location</option>
+                    <option value="town">Town</option>
+                </select>
             </div>
-        </div>
-    </footer>
+            <div id="ambianceFormContainer" class="ambiance-form-container">
+                <!--Where the form populates-->
+            </div>
+            <div class="ambiance-button-container">
+                <button id="ambiancePlayButton" class="ambiance-button">
+                    <span class="material-icons">play_arrow</span>
+                </button>
+                <button id="ambiancePauseButton" class="ambiance-button">
+                    <span class="material-icons">stop</span>
+                </button>
+            </div>
+            <div id="audioContainer">
+    
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="link-container">
+                <div>
+                    <a href="https://github.com/VanderalT/dnd-ambiance-app" target="_blank"><img
+                            src="./styles/images/GitHub-Mark-Light-120px-plus.png" alt="github-Link"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="./playback.js"></script>
     <script src="./ambiance-form.js"></script>
     <script src="./index.js"></script>
