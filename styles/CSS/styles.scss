@@ -25,8 +25,6 @@ body{
 header {
     display: flex;
     justify-content: center;
-    margin-top: 5vh;
-    margin-bottom: 2vh;
 }
 
 main {
@@ -43,10 +41,13 @@ main {
 }
 
 footer{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+    position: fixed;
+    bottom: 2vh;
+    right: 3vw;
+    width: 5%;
+    border-radius: 25px;
     height: 6vh;
+    background-color: rgba(0, 0, 0, 0.308);
 }
 
 @mixin page-header {
@@ -69,11 +70,15 @@ footer{
 
 @keyframes flicker{
     0% {
-        opacity: 97%;
+        opacity: 96%;
     }
     100% {
         opacity: 100%;
     }
+}
+
+#page-container{
+    min-height: 100vh;
 }
 
 .ambiance-candle-anim::before{
@@ -85,25 +90,27 @@ footer{
     bottom: 0;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     background: rgb(249,207,147);
     animation: flicker var(--animation-time) ease alternate infinite;
     background: radial-gradient(circle, rgba(241, 173, 78, 0.438) 0%, rgba(0,0,0,1) 100%);
 }
 
 .ambianceHeaders {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
     text-align: center;
     width: fit-content;
     h1 {
         @include page-header;
         @include text-shadows;
-        font-size: 5rem;
+        font-size: 5vw;
     }
 
     h2 {
         @include forum-default;
         @include text-shadows;
-        font-size: 1.5rem;
+        font-size: 1.5vw;
     }
 }
 
@@ -211,12 +218,13 @@ footer{
 .link-container{
     display: flex;
     justify-content: center;
-
     img{
         @include transition-default;
         width: 2vw;
         height: auto;
         opacity: 50%;
+        margin-top: 5px;
+        margin-bottom: 5px;
 
         &:hover{
             cursor: pointer;

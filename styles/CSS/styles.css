@@ -23,8 +23,6 @@ body {
 header {
   display: flex;
   justify-content: center;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
 }
 
 main {
@@ -43,15 +41,18 @@ main {
 }
 
 footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+  position: fixed;
+  bottom: 2vh;
+  right: 3vw;
+  width: 5%;
+  border-radius: 25px;
   height: 6vh;
+  background-color: rgba(0, 0, 0, 0.308);
 }
 
 @-webkit-keyframes flicker {
   0% {
-    opacity: 97%;
+    opacity: 96%;
   }
   100% {
     opacity: 100%;
@@ -60,12 +61,16 @@ footer {
 
 @keyframes flicker {
   0% {
-    opacity: 97%;
+    opacity: 96%;
   }
   100% {
     opacity: 100%;
   }
 }
+#page-container {
+  min-height: 100vh;
+}
+
 .ambiance-candle-anim::before {
   content: "";
   z-index: -1;
@@ -75,7 +80,7 @@ footer {
   bottom: 0;
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   background: rgb(249, 207, 147);
   -webkit-animation: flicker var(--animation-time) ease alternate infinite;
           animation: flicker var(--animation-time) ease alternate infinite;
@@ -83,6 +88,8 @@ footer {
 }
 
 .ambianceHeaders {
+  margin-top: 5vh;
+  margin-bottom: 2vh;
   text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -92,13 +99,13 @@ footer {
   font-family: "Blackcastlemf-BG5n";
   font-weight: 100;
   text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
-  font-size: 5rem;
+  font-size: 5vw;
 }
 .ambianceHeaders h2 {
   font-family: "Forum";
   font-weight: 100;
   text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 
 .ambiance-location-container {
@@ -206,6 +213,8 @@ footer {
   width: 2vw;
   height: auto;
   opacity: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .link-container img:hover {
   cursor: pointer;
