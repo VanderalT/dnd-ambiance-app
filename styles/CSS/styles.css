@@ -23,6 +23,7 @@ body {
 header {
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 
 main {
@@ -31,8 +32,6 @@ main {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-width: 400px;
-  padding: 0 20px;
   border: 2px;
   border-radius: 20px;
   border-style: solid;
@@ -112,7 +111,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
 }
 .ambiance-location-container h1 {
   font-family: "Forum";
@@ -224,4 +222,81 @@ footer {
   cursor: pointer;
   opacity: 100%;
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 420px) {
+  main {
+    width: 75vw;
+    margin: 0 12.5vw;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 2vh;
+    right: 3vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 25%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .ambianceHeaders {
+    text-align: center;
+  }
+  .ambianceHeaders h1 {
+    font-size: 20vw;
+  }
+  .ambianceHeaders h2 {
+    font-size: 5vw;
+  }
+
+  .ambiance-location-container h1 {
+    font-family: "Forum";
+    font-weight: 100;
+    text-align: center;
+    font-size: 10vw;
+    text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
+  }
+  .ambiance-location-container select {
+    font-family: "Forum";
+    font-weight: 100;
+    align-self: center;
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 6vw;
+    background-color: rgba(250, 238, 224, 0.4745098039);
+    border: none;
+    border-radius: 10px;
+  }
+
+  .ambiance-form-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .ambiance-form-container form {
+    inline-size: -webkit-max-content;
+    inline-size: -moz-max-content;
+    inline-size: max-content;
+  }
+  .ambiance-form-container form h2 {
+    font-size: 5vw;
+  }
+  .ambiance-form-container form input[type=radio] {
+    transition: 0.3s ease-in-out;
+    width: 5vw;
+    height: 5vw;
+  }
+  .ambiance-form-container form label {
+    font-family: "Forum";
+    font-weight: 100;
+    margin-left: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
 }/*# sourceMappingURL=styles.css.map */

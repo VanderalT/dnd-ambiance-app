@@ -25,14 +25,13 @@ body{
 header {
     display: flex;
     justify-content: center;
+    width: 100vw;
 }
 
 main {
     margin: 0 25vw;
     width: 50vw;
     height: fit-content;
-    min-width: 400px;
-    padding: 0 20px;
     border: 2px;
     border-radius: 20px;
     border-style: solid;
@@ -118,7 +117,6 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px;
 
     h1 {
         @include forum-default;
@@ -237,6 +235,76 @@ footer{
     }
 }
 
+@media screen and (max-width: 420px){
+    main {
+        width: 75vw;
+        margin: 0 12.5vw;
+    }
+
+    footer{
+        position: fixed;
+        bottom: 2vh;
+        right: 3vw;
+        width: fit-content;
+        border-radius: 25%;
+        height: fit-content;
+    }
+
+    .ambianceHeaders {
+        text-align: center;
+        h1 {
+            font-size: 20vw;
+        }
+    
+        h2 {
+            font-size: 5vw;
+        }
+    }
+
+    .ambiance-location-container {
+    
+        h1 {
+            @include forum-default;
+            text-align: center;
+            font-size: 10vw;
+            text-shadow: 2px 2px #ebebeb62;
+        }
+    
+        select {
+            @include forum-default;
+            align-self: center;
+            text-align: center;
+            width: fit-content;
+            font-size: 6vw;
+            background-color: #faeee079;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+
+    .ambiance-form-container{
+        width: fit-content;
+        form {
+            inline-size: max-content;
+            h2{
+                font-size: 5vw;
+            }
+
+            input[type="radio"]{
+                @include transition-default;
+                width: 5vw;
+                height: 5vw;
+            }
+    
+            label {
+                @include forum-default;
+                margin-left: 5px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
 
 
 
