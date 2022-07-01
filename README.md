@@ -1,6 +1,7 @@
 # dnd-ambiance-app
 
 Dnd Ambiance Application
+ver 1.0
 
 This application has been made to help roleplaying game masters easily set the tone with ambient sounds and music.
 
