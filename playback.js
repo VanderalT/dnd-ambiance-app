@@ -81,7 +81,6 @@ class AudioPlayer {
                     audioEntry.setAttribute('loop','true');
                 }
                 audioPlayback.appendChild(audioEntry);
-                console.log(audioArrayEntry);
             }
         }
 

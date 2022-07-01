@@ -285,7 +285,10 @@ class AudioForm{
             townAmbianceForm.appendChild(highWindLabel);
 
             return 'town';
-        }
+        } 
+        // else if ( this.locationSelect.value == 'harbour'){
+        // } else if (this.locationSelect.value == 'sewer'){
+        // }
         else{
             const formContainer = document.querySelector('#ambianceFormContainer');
             formContainer.removeChild(formContainer.lastChild);
