@@ -45,7 +45,7 @@ footer{
     bottom: 2vh;
     right: 3vw;
     width: 5%;
-    border-radius: 25px;
+    border-radius: 25%;
     height: 6vh;
     background-color: rgba(0, 0, 0, 0.308);
 }
@@ -216,22 +216,28 @@ footer{
 }
 
 .link-container{
+    height: fit-content;
+    width: auto;
     display: flex;
     justify-content: center;
-    img{
+
+    img {
         @include transition-default;
         width: 2vw;
         height: auto;
         opacity: 50%;
-        margin-top: 5px;
+        margin-top: 20%;
         margin-bottom: 5px;
 
         &:hover{
             cursor: pointer;
             opacity: 100%;
+            transform: scale(1.2);
         }
     }
 }
+
+
 
 
 

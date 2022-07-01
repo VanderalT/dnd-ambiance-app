@@ -45,7 +45,7 @@ footer {
   bottom: 2vh;
   right: 3vw;
   width: 5%;
-  border-radius: 25px;
+  border-radius: 25%;
   height: 6vh;
   background-color: rgba(0, 0, 0, 0.308);
 }
@@ -205,6 +205,10 @@ footer {
 }
 
 .link-container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: auto;
   display: flex;
   justify-content: center;
 }
@@ -213,10 +217,11 @@ footer {
   width: 2vw;
   height: auto;
   opacity: 50%;
-  margin-top: 5px;
+  margin-top: 20%;
   margin-bottom: 5px;
 }
 .link-container img:hover {
   cursor: pointer;
   opacity: 100%;
+  transform: scale(1.2);
 }/*# sourceMappingURL=styles.css.map */
