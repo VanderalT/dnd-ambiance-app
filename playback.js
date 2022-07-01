@@ -51,6 +51,7 @@ class AudioPlayer {
             for(const input of this.musicInputs){
                 if(input.checked){
                     audioArray.townMusic = input.value
+                    var music = true;
                 }
             };
 
@@ -74,8 +75,13 @@ class AudioPlayer {
             if(!audioArrayEntry.includes('null')){
                 const audioEntry = document.createElement('audio');
                 audioEntry.setAttribute('src',`./sound-files/${audioArrayEntry[0]}${audioArrayEntry[1]}.mp3`);
-                audioEntry.setAttribute('loop','true');
+                if(music){
+                    audioEntry.setAttribute('loop','false');
+                } else {
+                    audioEntry.setAttribute('loop','true');
+                }
                 audioPlayback.appendChild(audioEntry);
+                console.log(audioArrayEntry);
             }
         }
 
