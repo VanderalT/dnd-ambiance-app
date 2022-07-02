@@ -48,7 +48,9 @@ footer {
   right: 3vw;
   width: 5%;
   border-radius: 25%;
-  height: 6vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: rgba(0, 0, 0, 0.308);
 }
 
