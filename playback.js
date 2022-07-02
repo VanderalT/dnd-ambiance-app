@@ -2,8 +2,8 @@ class AudioPlayer {
     constructor(locationSelect){
         this.locationSelect = locationSelect;
 
-        this.playButton = document.querySelector('#ambiancePlayButton');
-        this.pauseButton = document.querySelector('#ambiancePauseButton');
+        this.playButton = document.querySelector('#ambiencePlayButton');
+        this.pauseButton = document.querySelector('#ambiencePauseButton');
         this.audioContainer = document.querySelector('#audioContainer');
 
         this.playButton.addEventListener('click', this.playbackAudio);

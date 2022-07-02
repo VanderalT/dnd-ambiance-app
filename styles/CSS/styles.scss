@@ -79,7 +79,7 @@ footer{
     }
 }
 
-.ambiance-candle-anim::before{
+.ambience-candle-anim::before{
     content: "";
     z-index: -1;
     top: 0;
@@ -94,7 +94,7 @@ footer{
     background: radial-gradient(circle, rgba(241, 173, 78, 0.438) 0%, rgba(0,0,0,1) 100%);
 }
 
-.ambianceHeaders {
+.ambienceHeaders {
     margin-top: 5vh;
     margin-bottom: 2vh;
     text-align: center;
@@ -112,7 +112,7 @@ footer{
     }
 }
 
-.ambiance-location-container {
+.ambience-location-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,7 +154,7 @@ footer{
     }
 }
 
-.ambiance-form-container{
+.ambience-form-container{
     margin: 0 5vw;
 
     form {
@@ -205,7 +205,7 @@ footer{
     }
 }
 
-.ambiance-button-container{
+.ambience-button-container{
     display: flex;
     justify-content: center;
 
@@ -269,7 +269,7 @@ footer{
         height: fit-content;
     }
 
-    .ambianceHeaders {
+    .ambienceHeaders {
         text-align: center;
         h1 {
             font-size: 20vw;
@@ -280,7 +280,7 @@ footer{
         }
     }
 
-    .ambiance-location-container {
+    .ambience-location-container {
     
         h1 {
             @include forum-default;
@@ -301,7 +301,7 @@ footer{
         }
     }
 
-    .ambiance-form-container{
+    .ambience-form-container{
         width: fit-content;
         margin: none;
         form {
@@ -324,7 +324,7 @@ footer{
         }
     }
 
-    .ambiance-button-container{
+    .ambience-button-container{
         button{
             border-style: none;
             color: #1C0A00;

@@ -71,7 +71,7 @@ footer {
     opacity: 100%;
   }
 }
-.ambiance-candle-anim::before {
+.ambience-candle-anim::before {
   content: "";
   z-index: -1;
   top: 0;
@@ -87,7 +87,7 @@ footer {
   background: radial-gradient(circle, rgba(241, 173, 78, 0.438) 0%, rgb(0, 0, 0) 100%);
 }
 
-.ambianceHeaders {
+.ambienceHeaders {
   margin-top: 5vh;
   margin-bottom: 2vh;
   text-align: center;
@@ -95,44 +95,44 @@ footer {
   width: -moz-fit-content;
   width: fit-content;
 }
-.ambianceHeaders h1 {
+.ambienceHeaders h1 {
   font-family: "Blackcastlemf-BG5n";
   font-weight: 100;
   text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
   font-size: 5rem;
 }
-.ambianceHeaders h2 {
+.ambienceHeaders h2 {
   font-family: "Forum";
   font-weight: 100;
   text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
   font-size: 2rem;
 }
 
-.ambiance-location-container {
+.ambience-location-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.ambiance-location-container .form-section {
+.ambience-location-container .form-section {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-.ambiance-location-container .form-inputs {
+.ambience-location-container .form-inputs {
   display: flex;
   flex-direction: row;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-.ambiance-location-container h1 {
+.ambience-location-container h1 {
   font-family: "Forum";
   font-weight: 100;
   text-align: center;
   font-size: 3rem;
   text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
 }
-.ambiance-location-container select {
+.ambience-location-container select {
   font-family: "Forum";
   font-weight: 100;
   align-self: center;
@@ -145,24 +145,24 @@ footer {
   border: none;
   border-radius: 10px;
 }
-.ambiance-location-container select:focus {
+.ambience-location-container select:focus {
   border: none;
 }
-.ambiance-location-container select:hover {
+.ambience-location-container select:hover {
   cursor: pointer;
 }
 
-.ambiance-form-container {
+.ambience-form-container {
   margin: 0 5vw;
 }
-.ambiance-form-container form {
+.ambience-form-container form {
   padding: 0 0 20px 20px;
 }
-.ambiance-form-container form .form-inputs {
+.ambience-form-container form .form-inputs {
   display: flex;
   flex-wrap: wrap;
 }
-.ambiance-form-container form h2 {
+.ambience-form-container form h2 {
   font-family: "Forum";
   font-weight: 100;
   font-style: italic;
@@ -170,7 +170,7 @@ footer {
   margin-top: 20px;
   margin-bottom: 5px;
 }
-.ambiance-form-container form input[type=radio] {
+.ambience-form-container form input[type=radio] {
   transition: 0.3s ease-in-out;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -185,13 +185,13 @@ footer {
   margin-top: -1px;
   vertical-align: middle;
 }
-.ambiance-form-container form input[type=radio]:hover {
+.ambience-form-container form input[type=radio]:hover {
   cursor: pointer;
 }
-.ambiance-form-container form input[type=radio]:checked {
+.ambience-form-container form input[type=radio]:checked {
   background-color: rgba(0, 0, 0, 0.281);
 }
-.ambiance-form-container form label {
+.ambience-form-container form label {
   font-family: "Forum";
   font-weight: 100;
   margin-left: 5px;
@@ -199,11 +199,11 @@ footer {
   vertical-align: middle;
 }
 
-.ambiance-button-container {
+.ambience-button-container {
   display: flex;
   justify-content: center;
 }
-.ambiance-button-container button {
+.ambience-button-container button {
   border-style: none;
   color: #1C0A00;
   background-color: #603601;
@@ -213,7 +213,7 @@ footer {
   border-radius: 50px;
   transition: 0.3s ease-in-out;
 }
-.ambiance-button-container button:hover {
+.ambience-button-container button:hover {
   cursor: pointer;
   opacity: 75%;
 }
@@ -265,24 +265,24 @@ footer {
     height: fit-content;
   }
 
-  .ambianceHeaders {
+  .ambienceHeaders {
     text-align: center;
   }
-  .ambianceHeaders h1 {
+  .ambienceHeaders h1 {
     font-size: 20vw;
   }
-  .ambianceHeaders h2 {
+  .ambienceHeaders h2 {
     font-size: 5vw;
   }
 
-  .ambiance-location-container h1 {
+  .ambience-location-container h1 {
     font-family: "Forum";
     font-weight: 100;
     text-align: center;
     font-size: 10vw;
     text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
   }
-  .ambiance-location-container select {
+  .ambience-location-container select {
     font-family: "Forum";
     font-weight: 100;
     align-self: center;
@@ -296,21 +296,21 @@ footer {
     border-radius: 10px;
   }
 
-  .ambiance-form-container {
+  .ambience-form-container {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin: none;
   }
-  .ambiance-form-container form h2 {
+  .ambience-form-container form h2 {
     font-size: 5vw;
   }
-  .ambiance-form-container form input[type=radio] {
+  .ambience-form-container form input[type=radio] {
     transition: 0.3s ease-in-out;
     width: 5vw;
     height: 5vw;
   }
-  .ambiance-form-container form label {
+  .ambience-form-container form label {
     font-family: "Forum";
     font-weight: 100;
     margin-left: 5px;
@@ -318,7 +318,7 @@ footer {
     vertical-align: middle;
   }
 
-  .ambiance-button-container button {
+  .ambience-button-container button {
     border-style: none;
     color: #1C0A00;
     background-color: #603601;
@@ -328,7 +328,7 @@ footer {
     border-radius: 50px;
     transition: 0.3s ease-in-out;
   }
-  .ambiance-button-container button:hover {
+  .ambience-button-container button:hover {
     cursor: pointer;
     opacity: 75%;
   }

@@ -6,9 +6,9 @@ function setAttributes(el, attrs){
 };
 
 class AudioForm{
-    constructor(locationSelect,ambianceForm, callback){
+    constructor(locationSelect,ambienceForm, callback){
         this.locationSelect = locationSelect;
-        this.ambianceForm = ambianceForm;
+        this.ambienceForm = ambienceForm;
         this.audioContainer = document.querySelector('#audioContainer');
 
         if(callback){
@@ -26,10 +26,10 @@ class AudioForm{
 
         //Creates and changes form when location updated
         if(this.locationSelect.value == 'town'){
-            const townAmbianceForm = document.createElement('form');
-            townAmbianceForm.setAttribute('id','townAmbianceForm');
-            townAmbianceForm.classList.add('town-ambiance-form');
-            this.ambianceForm.appendChild(townAmbianceForm);
+            const townAmbienceForm = document.createElement('form');
+            townAmbienceForm.setAttribute('id','townAmbienceForm');
+            townAmbienceForm.classList.add('town-ambience-form');
+            this.ambienceForm.appendChild(townAmbienceForm);
             
             //SectionContainer
             const timeOfDayContainer = document.createElement('div');
@@ -71,7 +71,7 @@ class AudioForm{
             todNightContainer.appendChild(todNightLabel);
             timeOfDayInputs.appendChild(todNightContainer);
             timeOfDayContainer.appendChild(timeOfDayInputs);
-            townAmbianceForm.appendChild(timeOfDayContainer);
+            townAmbienceForm.appendChild(timeOfDayContainer);
             
             
             const businessContainer = document.createElement('div');
@@ -143,7 +143,7 @@ class AudioForm{
             highBusContainer.appendChild(highBusLabel);
             businessInputs.appendChild(highBusContainer);
             businessContainer.appendChild(businessInputs);
-            townAmbianceForm.appendChild(businessContainer);
+            townAmbienceForm.appendChild(businessContainer);
             
 
             const musicContainer = document.createElement('div');
@@ -215,7 +215,7 @@ class AudioForm{
             victoriousMusicContainer.appendChild(victoriousMusicLabel);
             musicInputs.appendChild(victoriousMusicContainer);
             musicContainer.appendChild(musicInputs);
-            townAmbianceForm.appendChild(musicContainer);
+            townAmbienceForm.appendChild(musicContainer);
 
             const rainContainer = document.createElement('div');
             rainContainer.classList.add('form-section');
@@ -301,7 +301,7 @@ class AudioForm{
             thunderRainContainer.appendChild(thunderRainLabel);
             rainInputs.appendChild(thunderRainContainer);
             rainContainer.appendChild(rainInputs);
-            townAmbianceForm.appendChild(rainContainer);
+            townAmbienceForm.appendChild(rainContainer);
 
             const windContainer = document.createElement('div');
             windContainer.classList.add('form-section');
@@ -372,7 +372,7 @@ class AudioForm{
             highWindContainer.appendChild(highWindLabel);
             windInputs.appendChild(highWindContainer);
             windContainer.appendChild(windInputs);
-            townAmbianceForm.appendChild(windContainer);
+            townAmbienceForm.appendChild(windContainer);
 
             return 'town';
         } 
@@ -380,7 +380,7 @@ class AudioForm{
         // } else if (this.locationSelect.value == 'sewer'){
         // }
         else{
-            const formContainer = document.querySelector('#ambianceFormContainer');
+            const formContainer = document.querySelector('#ambienceFormContainer');
             formContainer.removeChild(formContainer.lastChild);
         }
     }

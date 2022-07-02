@@ -1,6 +1,6 @@
-# dnd-ambiance-app
+# dnd-ambience-app
 
-Dnd Ambiance Application  :crystal_ball:  
+Dnd Ambience Application  :crystal_ball:  
 Author: Vanderal Talagi
 
 This application has been made to help roleplaying game masters easily set the tone with ambient sounds and music.
