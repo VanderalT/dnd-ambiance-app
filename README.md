@@ -17,9 +17,9 @@ To be created:
 - Harbour
 - Sewer
 
-ver 1.0
-Application can run on desktop
+ver 1.0:
+Application can run on desktop;
 
-ver 1.01
-Added mobile responsiveness
-Removed Github link on phone sizes
+ver 1.01:
+Added mobile responsiveness;
+Removed Github link on phone sizes;
