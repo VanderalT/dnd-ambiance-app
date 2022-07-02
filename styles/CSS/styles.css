@@ -27,7 +27,10 @@ header {
 }
 
 main {
-  margin: 0 25vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25vw;
   width: 50vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -66,10 +69,6 @@ footer {
     opacity: 100%;
   }
 }
-#page-container {
-  min-height: 100vh;
-}
-
 .ambiance-candle-anim::before {
   content: "";
   z-index: -1;
@@ -98,19 +97,31 @@ footer {
   font-family: "Blackcastlemf-BG5n";
   font-weight: 100;
   text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
-  font-size: 5vw;
+  font-size: 5rem;
 }
 .ambianceHeaders h2 {
   font-family: "Forum";
   font-weight: 100;
   text-shadow: 2px 2px rgba(235, 235, 235, 0.3843137255);
-  font-size: 1.5vw;
+  font-size: 2rem;
 }
 
 .ambiance-location-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.ambiance-location-container .form-section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.ambiance-location-container .form-inputs {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .ambiance-location-container h1 {
   font-family: "Forum";
@@ -140,11 +151,14 @@ footer {
 }
 
 .ambiance-form-container {
-  display: flex;
-  justify-content: center;
+  margin: 0 5vw;
 }
 .ambiance-form-container form {
   padding: 0 0 20px 20px;
+}
+.ambiance-form-container form .form-inputs {
+  display: flex;
+  flex-wrap: wrap;
 }
 .ambiance-form-container form h2 {
   font-family: "Forum";
@@ -213,6 +227,7 @@ footer {
 .link-container img {
   transition: 0.3s ease-in-out;
   width: 2vw;
+  min-width: 40px;
   height: auto;
   opacity: 50%;
   margin-top: 20%;
@@ -224,9 +239,14 @@ footer {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
+  body {
+    width: 100vw;
+  }
+
   main {
     width: 75vw;
+    min-width: 0;
     margin: 0 12.5vw;
   }
 
@@ -278,11 +298,7 @@ footer {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-  }
-  .ambiance-form-container form {
-    inline-size: -webkit-max-content;
-    inline-size: -moz-max-content;
-    inline-size: max-content;
+    margin: none;
   }
   .ambiance-form-container form h2 {
     font-size: 5vw;
@@ -298,5 +314,24 @@ footer {
     margin-left: 5px;
     margin-right: 10px;
     vertical-align: middle;
+  }
+
+  .ambiance-button-container button {
+    border-style: none;
+    color: #1C0A00;
+    background-color: #603601;
+    margin: 5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+  }
+  .ambiance-button-container button:hover {
+    cursor: pointer;
+    opacity: 75%;
+  }
+
+  .link-container {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */

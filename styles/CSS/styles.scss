@@ -29,7 +29,10 @@ header {
 }
 
 main {
-    margin: 0 25vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 25vw;
     width: 50vw;
     height: fit-content;
     border: 2px;
@@ -76,10 +79,6 @@ footer{
     }
 }
 
-#page-container{
-    min-height: 100vh;
-}
-
 .ambiance-candle-anim::before{
     content: "";
     z-index: -1;
@@ -103,13 +102,13 @@ footer{
     h1 {
         @include page-header;
         @include text-shadows;
-        font-size: 5vw;
+        font-size: 5rem;
     }
 
     h2 {
         @include forum-default;
         @include text-shadows;
-        font-size: 1.5vw;
+        font-size: 2rem;
     }
 }
 
@@ -117,6 +116,16 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    .form-section{
+        width: fit-content;
+    }
+
+    .form-inputs{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+    }
 
     h1 {
         @include forum-default;
@@ -146,11 +155,15 @@ footer{
 }
 
 .ambiance-form-container{
-    display: flex;
-    justify-content: center;
+    margin: 0 5vw;
 
     form {
         padding: 0 0 20px 20px;
+
+        .form-inputs{
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         h2{
             @include forum-default;
@@ -222,6 +235,7 @@ footer{
     img {
         @include transition-default;
         width: 2vw;
+        min-width: 40px;
         height: auto;
         opacity: 50%;
         margin-top: 20%;
@@ -235,9 +249,14 @@ footer{
     }
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 550px){
+    body{
+        width: 100vw;
+    }
+
     main {
         width: 75vw;
+        min-width: 0;
         margin: 0 12.5vw;
     }
 
@@ -284,8 +303,8 @@ footer{
 
     .ambiance-form-container{
         width: fit-content;
+        margin: none;
         form {
-            inline-size: max-content;
             h2{
                 font-size: 5vw;
             }
@@ -303,6 +322,28 @@ footer{
                 vertical-align: middle;
             }
         }
+    }
+
+    .ambiance-button-container{
+        button{
+            border-style: none;
+            color: #1C0A00;
+            background-color: #603601;
+            margin: 5px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50px;
+            @include transition-default;
+    
+            &:hover{
+                cursor: pointer;
+                opacity: 75%;
+            }
+        }
+    }
+
+    .link-container{
+        display: none;
     }
 }
 

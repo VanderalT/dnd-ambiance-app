@@ -31,9 +31,14 @@ class AudioForm{
             townAmbianceForm.classList.add('town-ambiance-form');
             this.ambianceForm.appendChild(townAmbianceForm);
             
+            //SectionContainer
+            const timeOfDayContainer = document.createElement('div');
+            timeOfDayContainer.classList.add('form-section');
+            const timeOfDayInputs = document.createElement('div');
+            timeOfDayInputs.classList.add('form-inputs');
             const timeOfDay = document.createElement('h2');
             timeOfDay.innerText = 'Time Of Day';
-            townAmbianceForm.appendChild(timeOfDay);
+            timeOfDayContainer.appendChild(timeOfDay);
             const todDay = document.createElement('input');
             setAttributes(todDay,{
                 'type' :'radio',
@@ -42,11 +47,14 @@ class AudioForm{
                 'value':'Day',
             })
             todDay.setAttribute('checked','true');
-            townAmbianceForm.appendChild(todDay);
             const todDayLabel = document.createElement('label');
             todDayLabel.setAttribute('for','day');
             todDayLabel.innerText = 'Day';
-            townAmbianceForm.appendChild(todDayLabel);
+            const todDayContainer = document.createElement('div');
+            todDayContainer.classList.add('input-container');
+            todDayContainer.appendChild(todDay);
+            todDayContainer.appendChild(todDayLabel);
+            timeOfDayInputs.appendChild(todDayContainer);
             const todNight = document.createElement('input');
             setAttributes(todNight,{
                 'type' :'radio',
@@ -54,15 +62,25 @@ class AudioForm{
                 'id'   :'night',
                 'value':'Night',
             });
-            townAmbianceForm.appendChild(todNight);
             const todNightLabel = document.createElement('label');
             todNightLabel.setAttribute('for','night');
             todNightLabel.innerText = 'Night';
-            townAmbianceForm.appendChild(todNightLabel);
-
+            const todNightContainer = document.createElement('div');
+            todNightContainer.classList.add('input-container');
+            todNightContainer.appendChild(todNight);
+            todNightContainer.appendChild(todNightLabel);
+            timeOfDayInputs.appendChild(todNightContainer);
+            timeOfDayContainer.appendChild(timeOfDayInputs);
+            townAmbianceForm.appendChild(timeOfDayContainer);
+            
+            
+            const businessContainer = document.createElement('div');
+            businessContainer.classList.add('form-section');
+            const businessInputs = document.createElement('div');
+            businessInputs.classList.add('form-inputs');
             const business = document.createElement('h2');
             business.innerText = 'Business';
-            townAmbianceForm.appendChild(business);
+            businessContainer.appendChild(business);
             const noBus = document.createElement('input');
             setAttributes(noBus,{
                 'type' :'radio',
@@ -71,11 +89,14 @@ class AudioForm{
                 'value': null
             });
             noBus.setAttribute('checked','true');
-            townAmbianceForm.appendChild(noBus);
             const noBusLabel = document.createElement('label');
             noBusLabel.setAttribute('for','noneBusiness');
             noBusLabel.innerText = 'None';
-            townAmbianceForm.appendChild(noBusLabel);
+            const noBusContainer = document.createElement('div');
+            noBusContainer.classList.add('input-container');
+            noBusContainer.appendChild(noBus);
+            noBusContainer.appendChild(noBusLabel);
+            businessInputs.appendChild(noBusContainer);
             const lowBus = document.createElement('input');
             setAttributes(lowBus,{
                 'type' :'radio',
@@ -83,11 +104,14 @@ class AudioForm{
                 'id'   :'lowBusiness',
                 'value':'Low',
             });
-            townAmbianceForm.appendChild(lowBus);
             const lowBusLabel = document.createElement('label');
             lowBusLabel.setAttribute('for','lowBusiness');
             lowBusLabel.innerText = 'Low';
-            townAmbianceForm.appendChild(lowBusLabel);
+            const lowBusContainer = document.createElement('div');
+            lowBusContainer.classList.add('input-container');
+            lowBusContainer.appendChild(lowBus);
+            lowBusContainer.appendChild(lowBusLabel);
+            businessInputs.appendChild(lowBusContainer);
             const medBus = document.createElement('input');
             setAttributes(medBus,{
                 'type' :'radio',
@@ -95,11 +119,14 @@ class AudioForm{
                 'id'   :'mediumBusiness',
                 'value':'Medium',
             });
-            townAmbianceForm.appendChild(medBus);
             const medBusLabel = document.createElement('label');
             medBusLabel.setAttribute('for','mediumBusiness');
             medBusLabel.innerText = 'Medium';
-            townAmbianceForm.appendChild(medBusLabel);
+            const medBusContainer = document.createElement('div');
+            medBusContainer.classList.add('input-container');
+            medBusContainer.appendChild(medBus);
+            medBusContainer.appendChild(medBusLabel);
+            businessInputs.appendChild(medBusContainer);
             const highBus = document.createElement('input');
             setAttributes(highBus,{
                 'type' :'radio',
@@ -107,15 +134,25 @@ class AudioForm{
                 'id'   :'highBusiness',
                 'value':'High',
             });
-            townAmbianceForm.appendChild(highBus);
             const highBusLabel = document.createElement('label');
             highBusLabel.setAttribute('for','highBusiness');
             highBusLabel.innerText = 'High';
-            townAmbianceForm.appendChild(highBusLabel);
+            const highBusContainer = document.createElement('div');
+            highBusContainer.classList.add('input-container');
+            highBusContainer.appendChild(highBus);
+            highBusContainer.appendChild(highBusLabel);
+            businessInputs.appendChild(highBusContainer);
+            businessContainer.appendChild(businessInputs);
+            townAmbianceForm.appendChild(businessContainer);
             
+
+            const musicContainer = document.createElement('div');
+            musicContainer.classList.add('form-section');
+            const musicInputs = document.createElement('div');
+            musicInputs.classList.add('form-inputs');
             const musicTown = document.createElement('h2');
             musicTown.innerText = 'Music';
-            townAmbianceForm.appendChild(musicTown);
+            musicContainer.appendChild(musicTown);
             const noMusic = document.createElement('input');
             setAttributes(noMusic,{
                 'type' :'radio',
@@ -124,11 +161,14 @@ class AudioForm{
                 'value': null
             });
             noMusic.setAttribute('checked','true');
-            townAmbianceForm.appendChild(noMusic);
             const noMusicLabel = document.createElement('label');
-            noMusicLabel.setAttribute('for','noneMusic');
             noMusicLabel.innerText = 'None';
-            townAmbianceForm.appendChild(noMusicLabel);
+            noMusicLabel.setAttribute('for','noneMusic');
+            const noMusicContainer = document.createElement('div');
+            noMusicContainer.classList.add('input-container');
+            noMusicContainer.appendChild(noMusic);
+            noMusicContainer.appendChild(noMusicLabel);
+            musicInputs.appendChild(noMusicContainer);
             const fightMusic = document.createElement('input');
             setAttributes(fightMusic,{
                 'type' :'radio',
@@ -136,11 +176,14 @@ class AudioForm{
                 'id'   :'fightMusic',
                 'value':'Fight',
             });
-            townAmbianceForm.appendChild(fightMusic);
             const fightMusicLabel = document.createElement('label');
             fightMusicLabel.setAttribute('for','fightMusic');
             fightMusicLabel.innerText = 'Fight';
-            townAmbianceForm.appendChild(fightMusicLabel);
+            const fightMusicContainer = document.createElement('div');
+            fightMusicContainer.classList.add('input-container');
+            fightMusicContainer.appendChild(fightMusic);
+            fightMusicContainer.appendChild(fightMusicLabel);
+            musicInputs.appendChild(fightMusicContainer);
             const eerieMusic = document.createElement('input');
             setAttributes(eerieMusic,{
                 'type' :'radio',
@@ -148,11 +191,14 @@ class AudioForm{
                 'id'   :'eerieMusic',
                 'value':'Eerie',
             });
-            townAmbianceForm.appendChild(eerieMusic);
             const eerieMusicLabel = document.createElement('label');
             eerieMusicLabel.setAttribute('for','eerieMusic');
             eerieMusicLabel.innerText = 'Eerie';
-            townAmbianceForm.appendChild(eerieMusicLabel);
+            const eerietMusicContainer = document.createElement('div');
+            eerietMusicContainer.classList.add('input-container');
+            eerietMusicContainer.appendChild(eerieMusic);
+            eerietMusicContainer.appendChild(eerieMusicLabel);
+            musicInputs.appendChild(eerietMusicContainer);
             const victoriousMusic = document.createElement('input');
             setAttributes(victoriousMusic,{
                 'type' :'radio',
@@ -160,15 +206,24 @@ class AudioForm{
                 'id'   :'victoriousMusic',
                 'value':'Victorious',
             });
-            townAmbianceForm.appendChild(victoriousMusic);
             const victoriousMusicLabel = document.createElement('label');
             victoriousMusicLabel.setAttribute('for','victoriousMusic');
             victoriousMusicLabel.innerText = 'Victorious';
-            townAmbianceForm.appendChild(victoriousMusicLabel);
+            const victoriousMusicContainer = document.createElement('div');
+            victoriousMusicContainer.classList.add('input-container');
+            victoriousMusicContainer.appendChild(victoriousMusic);
+            victoriousMusicContainer.appendChild(victoriousMusicLabel);
+            musicInputs.appendChild(victoriousMusicContainer);
+            musicContainer.appendChild(musicInputs);
+            townAmbianceForm.appendChild(musicContainer);
 
+            const rainContainer = document.createElement('div');
+            rainContainer.classList.add('form-section');
+            const rainInputs = document.createElement('div');
+            rainInputs.classList.add('form-inputs');
             const rainTown = document.createElement('h2');
             rainTown.innerText = 'Rain';
-            townAmbianceForm.appendChild(rainTown);
+            rainContainer.appendChild(rainTown);
             const noneRain = document.createElement('input');
             setAttributes(noneRain,{
                 'type' :'radio',
@@ -177,11 +232,14 @@ class AudioForm{
                 'value': null
             });
             noneRain.setAttribute('checked','true');
-            townAmbianceForm.appendChild(noneRain);
             const noneRainLabel = document.createElement('label');
             noneRainLabel.setAttribute('for','noneRain');
             noneRainLabel.innerText = 'None';
-            townAmbianceForm.appendChild(noneRainLabel);
+            const noneRainContainer = document.createElement('div');
+            noneRainContainer.classList.add('input-container');
+            noneRainContainer.appendChild(noneRain);
+            noneRainContainer.appendChild(noneRainLabel);
+            rainInputs.appendChild(noneRainContainer);
             const lightRain = document.createElement('input');
             setAttributes(lightRain,{
                 'type' :'radio',
@@ -189,11 +247,14 @@ class AudioForm{
                 'id'   :'lightRain',
                 'value':'Light'
             });
-            townAmbianceForm.appendChild(lightRain);
             const lightRainLabel = document.createElement('label');
             lightRainLabel.setAttribute('for','lightRain');
             lightRainLabel.innerText = 'Light';
-            townAmbianceForm.appendChild(lightRainLabel);
+            const lightRainContainer = document.createElement('div');
+            lightRainContainer.classList.add('input-container');
+            lightRainContainer.appendChild(lightRain);
+            lightRainContainer.appendChild(lightRainLabel);
+            rainInputs.appendChild(lightRainContainer);
             const mediumRain = document.createElement('input');
             setAttributes(mediumRain,{
                 'type' :'radio',
@@ -201,11 +262,14 @@ class AudioForm{
                 'id'   :'mediumRain',
                 'value':'Medium'
             });
-            townAmbianceForm.appendChild(mediumRain);
             const mediumRainLabel = document.createElement('label');
             mediumRainLabel.setAttribute('for','mediumRain');
             mediumRainLabel.innerText = 'Medium';
-            townAmbianceForm.appendChild(mediumRainLabel);
+            const mediumRainContainer = document.createElement('div');
+            mediumRainContainer.classList.add('input-container');
+            mediumRainContainer.appendChild(mediumRain);
+            mediumRainContainer.appendChild(mediumRainLabel);
+            rainInputs.appendChild(mediumRainContainer);
             const heavyRain = document.createElement('input');
             setAttributes(heavyRain,{
                 'type' :'radio',
@@ -213,11 +277,14 @@ class AudioForm{
                 'id'   :'heavyRain',
                 'value':'Heavy'
             });
-            townAmbianceForm.appendChild(heavyRain);
             const heavyRainLabel = document.createElement('label');
             heavyRainLabel.setAttribute('for','heavyRain');
             heavyRainLabel.innerText = 'Heavy';
-            townAmbianceForm.appendChild(heavyRainLabel);
+            const heavyRainContainer = document.createElement('div');
+            heavyRainContainer.classList.add('input-container');
+            heavyRainContainer.appendChild(heavyRain);
+            heavyRainContainer.appendChild(heavyRainLabel);
+            rainInputs.appendChild(heavyRainContainer);
             const thunderRain = document.createElement('input');
             setAttributes(thunderRain,{
                 'type' :'radio',
@@ -225,15 +292,24 @@ class AudioForm{
                 'id'   :'thunderRain',
                 'value':'Thunder'
             });
-            townAmbianceForm.appendChild(thunderRain);
             const thunderRainLabel = document.createElement('label');
             thunderRainLabel.setAttribute('for','thunderRain');
             thunderRainLabel.innerText = 'Thunder';
-            townAmbianceForm.appendChild(thunderRainLabel);
+            const thunderRainContainer = document.createElement('div');
+            thunderRainContainer.classList.add('input-container');
+            thunderRainContainer.appendChild(thunderRain);
+            thunderRainContainer.appendChild(thunderRainLabel);
+            rainInputs.appendChild(thunderRainContainer);
+            rainContainer.appendChild(rainInputs);
+            townAmbianceForm.appendChild(rainContainer);
 
+            const windContainer = document.createElement('div');
+            windContainer.classList.add('form-section');
+            const windInputs = document.createElement('div');
+            windInputs.classList.add('form-inputs');
             const windTown = document.createElement('h2');
             windTown.innerText = 'Wind';
-            townAmbianceForm.appendChild(windTown);
+            windContainer.appendChild(windTown);
             const noneWind = document.createElement('input');
             setAttributes(noneWind, {
                 'type': 'radio',
@@ -242,11 +318,14 @@ class AudioForm{
                 'value': null
             });
             noneWind.setAttribute('checked', 'true');
-            townAmbianceForm.appendChild(noneWind);
             const noneWindLabel = document.createElement('label');
             noneWindLabel.setAttribute('for', 'noneWind');
             noneWindLabel.innerText = 'None';
-            townAmbianceForm.appendChild(noneWindLabel);
+            const noWindContainer = document.createElement('div');
+            noWindContainer.classList.add('input-container');
+            noWindContainer.appendChild(noneWind);
+            noWindContainer.appendChild(noneWindLabel);
+            windInputs.appendChild(noWindContainer);
             const lightWind = document.createElement('input');
             setAttributes(lightWind, {
                 'type': 'radio',
@@ -254,11 +333,14 @@ class AudioForm{
                 'id': 'lightWind',
                 'value': 'Light'
             });
-            townAmbianceForm.appendChild(lightWind);
             const lightWindLabel = document.createElement('label');
             lightWindLabel.setAttribute('for', 'lightWind');
             lightWindLabel.innerText = 'Light';
-            townAmbianceForm.appendChild(lightWindLabel);
+            const lightWindContainer = document.createElement('div');
+            lightWindContainer.classList.add('input-container');
+            lightWindContainer.appendChild(lightWind);
+            lightWindContainer.appendChild(lightWindLabel);
+            windInputs.appendChild(lightWindContainer);
             const mediumWind = document.createElement('input');
             setAttributes(mediumWind, {
                 'type': 'radio',
@@ -266,11 +348,14 @@ class AudioForm{
                 'id': 'mediumWind',
                 'value': 'Medium'
             });
-            townAmbianceForm.appendChild(mediumWind);
             const mediumWindLabel = document.createElement('label');
             mediumWindLabel.setAttribute('for', 'mediumWind');
             mediumWindLabel.innerText = 'Medium';
-            townAmbianceForm.appendChild(mediumWindLabel);
+            const mediumWindContainer = document.createElement('div');
+            mediumWindContainer.classList.add('input-container');
+            mediumWindContainer.appendChild(mediumWind);
+            mediumWindContainer.appendChild(mediumWindLabel);
+            windInputs.appendChild(mediumWindContainer);
             const highWind = document.createElement('input');
             setAttributes(highWind, {
                 'type': 'radio',
@@ -278,11 +363,16 @@ class AudioForm{
                 'id': 'highWind',
                 'value': 'High'
             });
-            townAmbianceForm.appendChild(highWind);
             const highWindLabel = document.createElement('label');
             highWindLabel.setAttribute('for', 'highWind');
             highWindLabel.innerText = 'Heavy';
-            townAmbianceForm.appendChild(highWindLabel);
+            const highWindContainer = document.createElement('div');
+            highWindContainer.classList.add('input-container');
+            highWindContainer.appendChild(highWind);
+            highWindContainer.appendChild(highWindLabel);
+            windInputs.appendChild(highWindContainer);
+            windContainer.appendChild(windInputs);
+            townAmbianceForm.appendChild(windContainer);
 
             return 'town';
         } 
